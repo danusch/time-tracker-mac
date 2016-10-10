@@ -74,6 +74,7 @@
     _idleTimeoutSeconds = 5*60;    // DEFAULT 5 minutes
     _enableStandbyDetection = YES;
     _showTimeInMenuBar = NO;
+    _showTotalTimeInMenuBar = NO;
 	timer = nil;
 	timeSinceSave = 0;
     _autosaveCsv = YES;
@@ -400,6 +401,12 @@
             _showTimeInMenuBar = NO;
         } else {
             _showTimeInMenuBar = YES;
+        }
+        NSString* showTotalTime = [rootObject valueForKey:@"showTotalTimeInMenuBar"];
+        if ([@"NO" isEqualToString:showTotalTime]) {
+            _showTotalTimeInMenuBar = NO;
+        } else {
+            _showTotalTimeInMenuBar = YES;
         }
         NSNumber* decimalHoursPref = [rootObject valueForKey:PREFKEY_DECIMAL_HOURS];
         if (decimalHoursPref != nil) {
@@ -911,7 +918,12 @@
     if (_showTimeInMenuBar) {
         [rootObject setValue:@"YES" forKey:@"showTimeInMenuBar"];
     } else {
-        [rootObject setValue:@"NO" forKey:@"showTimeInMenuBar"];        
+        [rootObject setValue:@"NO" forKey:@"showTimeInMenuBar"];
+    }
+    if (_showTotalTimeInMenuBar) {
+        [rootObject setValue:@"YES" forKey:@"showTotalTimeInMenuBar"];
+    } else {
+        [rootObject setValue:@"NO" forKey:@"showTotalTimeInMenuBar"];
     }
     if (_enableStandbyDetection) {
         [rootObject setValue:@"YES" forKey:@"standbyDetection"];
@@ -1540,6 +1552,11 @@
     if (_showTimeInMenuBar && _curWorkPeriod != nil) {
         seconds = [_curWorkPeriod totalTime];
     }
+    if (_showTotalTimeInMenuBar) {
+        TTTimeProvider *provider = [TTTimeProvider instance];
+        NSPredicate *predicate = [provider predicateWithSingleDayFromToday:0];
+        seconds = [_metaTask filteredTime:[self predicate]];
+    }
     if (timer == nil) {
         // start a new task
         if (_selTask != nil && [_selTask isKindOfClass:[TTask class]]
@@ -1551,7 +1568,7 @@
     } else {
         [statusItem setToolTip:[NSString stringWithFormat:@"TimeTracker Stop: %@", [self stringForCurrentProjectTask]]];
     }        
-    if (_showTimeInMenuBar) {
+    if (_showTimeInMenuBar || _showTotalTimeInMenuBar) {
         if (seconds > 0) {
             [statusItem setTitle:[TimeIntervalFormatter secondsToString:seconds]];
         } else {
@@ -1686,6 +1703,21 @@
 -(BOOL) showTimeInMenuBar
 {
     return _showTimeInMenuBar;
+}
+
+
+-(void) setShowTotalTimeInMenuBar:(BOOL)show
+{
+    _showTotalTimeInMenuBar = show;
+    if (!show) {
+        [statusItem setTitle:@""];
+    } else {
+        [self updateProminentDisplay];
+    }
+}
+-(BOOL) showTotalTimeInMenuBar
+{
+    return _showTotalTimeInMenuBar;
 }
 
 

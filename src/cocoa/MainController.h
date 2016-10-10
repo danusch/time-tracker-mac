@@ -130,6 +130,7 @@
     int _maxLruSize;
     NSMenu *_startMenu;
     BOOL _showTimeInMenuBar;
+    BOOL _showTotalTimeInMenuBar;
     int _idleTimeoutSeconds;
     BOOL _enableStandbyDetection;
     TWorkPeriod *_currentEditingWP;
@@ -206,6 +207,8 @@
 
 -(void) setShowTimeInMenuBar:(BOOL)show;
 -(BOOL) showTimeInMenuBar;
+-(void) setShowTotalTimeInMenuBar:(BOOL)show;
+-(BOOL) showTotalTimeInMenuBar;
 
 -(void) setIdleTimeoutSeconds:(int)seconds;
 -(int)  idleTimeoutSeconds;
