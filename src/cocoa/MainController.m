@@ -1553,9 +1553,16 @@
         seconds = [_curWorkPeriod totalTime];
     }
     if (_showTotalTimeInMenuBar) {
-        TTTimeProvider *provider = [TTTimeProvider instance];
-        NSPredicate *predicate = [provider predicateWithSingleDayFromToday:0];
-        seconds = [_metaTask filteredTime:[self predicate]];
+        @try {
+            TTTimeProvider *provider = [TTTimeProvider instance];
+            NSPredicate *predicate = [provider predicateWithSingleDayFromToday:0];
+            id<ITask> task = _metaTask;
+            seconds = [task filteredTime:[TTParsedPredicate producePredicateFromTemplate:predicate]];
+        }
+        @catch (NSException *exception) {
+            //NSLog(@"%@",[NSThread callStackSymbols]);
+            NSLog(@"Reason: %@", exception.reason);
+        }
     }
     if (timer == nil) {
         // start a new task
