@@ -29,7 +29,7 @@
     int hours = seconds / 3600;
     int minutes = (seconds % 3600) / 60;
     return [NSString stringWithFormat: @"%@%d:%@%d",
-            (hours < 10 ? @"0" : @""), hours,
+            @"", hours,
             (minutes < 10 ? @"0" : @""), minutes];
 }
 
