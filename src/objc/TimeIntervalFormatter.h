@@ -16,6 +16,8 @@
 
 + (NSString *) secondsToString: (int) seconds;
 
++ (NSString *) secondsToHourMinString: (int) seconds;
+
 + (NSString*) secondsToDecimalHours: (int) seconds; 
 
 + (Class) transformedValueClass;

@@ -1577,7 +1577,10 @@
     }        
     if (_showTimeInMenuBar || _showTotalTimeInMenuBar) {
         if (seconds > 0) {
-            [statusItem setTitle:[TimeIntervalFormatter secondsToString:seconds]];
+            if(_showTimeInMenuBar)
+                [statusItem setTitle:[TimeIntervalFormatter secondsToString:seconds]];
+            if(_showTotalTimeInMenuBar)
+                [statusItem setTitle:[TimeIntervalFormatter secondsToHourMinString:seconds]];
         } else {
             [statusItem setTitle:@""];
         }
