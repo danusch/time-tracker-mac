@@ -1557,6 +1557,7 @@
             TTTimeProvider *provider = [TTTimeProvider instance];
             NSPredicate *predicate = [provider predicateWithSingleDayFromToday:0];
             id<ITask> task = _metaTask;
+            [_metaTask setTasks: [_metaProject tasks]];
             seconds = [task filteredTime:[TTParsedPredicate producePredicateFromTemplate:predicate]];
         }
         @catch (NSException *exception) {
