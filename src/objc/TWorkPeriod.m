@@ -153,7 +153,7 @@
 
 -(NSInteger) weekday {
     NSCalendar *cal = [NSCalendar currentCalendar];
-    NSDateComponents *comp = [cal components:(NSWeekdayCalendarUnit | NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit) fromDate:_startTime];
+    NSDateComponents *comp = [cal components:(NSCalendarUnitWeekday | NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear) fromDate:_startTime];
     NSInteger result = [comp weekday];
     return result;
 }
@@ -162,7 +162,7 @@
 -(NSInteger) daysSinceDate:(NSDate*)date {
     TTTimeProvider *provider = [TTTimeProvider instance];
     NSDate* today = provider.todayStartTime;
-    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSDayCalendarUnit
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitDay
                                                                    fromDate:date toDate:today options:0];
     return components.day;    
 }
@@ -170,15 +170,15 @@
 -(NSInteger) weeksSinceDate:(NSDate*)date {
     TTTimeProvider *provider = [TTTimeProvider instance];
     NSDate* today = provider.todayStartTime;
-    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSWeekCalendarUnit
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitWeekOfYear
                                                                        fromDate:date toDate:today options:0];
-    return components.week;
+    return components.weekOfYear;
 }
 
 -(NSInteger) monthsSinceDate:(NSDate*)date {
     TTTimeProvider *provider = [TTTimeProvider instance];
     NSDate* today = provider.todayStartTime;
-    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSMonthCalendarUnit
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitMonth
                                                                    fromDate:date toDate:today options:0];
     return components.month;
 }

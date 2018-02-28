@@ -1,3 +1,5 @@
+Changed to work for OSX 10
+
 Some more enhancements
 Rainer Burgstaller <rburgst@gmail.com>
 

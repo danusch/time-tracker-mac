@@ -8,12 +8,12 @@ task :build_release => [:changelog] do
   sh "xcodebuild -configuration Release -target 'Release Package' -arch 'i386 x86_64 ppc' -project 'Time Tracker.xcodeproj' clean build"
 end
 
-task :changelog => ['ChangeLog.txt']
+task :changelog => ['ChangeLog.md']
 task :clean do
-  sh "rm -vf ChangeLog.txt"
+  sh "rm -vf ChangeLog.md"
 end
 
-file 'ChangeLog.txt' => 'ChangeLog.yml' do |t|
+file 'ChangeLog.md' => 'ChangeLog.yml' do |t|
   puts "Generating '#{t.name}' from '#{t.prerequisites}'"
 
   # Load the yml file
