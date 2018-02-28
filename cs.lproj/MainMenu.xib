@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" promptedForUpgradeToXcode5="NO">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9059"/>
-        <capability name="box content view" minToolsVersion="7.0"/>
+        <deployment version="101000" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -11,7 +11,7 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="-3" userLabel="Application"/>
         <window title="Time Tracker" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" frameAutosaveName="TimeTrackerWindow" animationBehavior="default" id="21" userLabel="Main Window">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" unifiedTitleAndToolbar="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -25,36 +25,36 @@
                 <subviews>
                     <splitView autosaveName="mainNorthSouthSplit" dividerStyle="thin" vertical="YES" id="2437" customClass="BWSplitView">
                         <rect key="frame" x="0.0" y="0.0" width="753" height="482"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <customView id="2438">
                                 <rect key="frame" x="0.0" y="0.0" width="227" height="482"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                 <subviews>
-                                    <splitView dividerStyle="thin" id="2440" customClass="BWSplitView">
-                                        <rect key="frame" x="0.0" y="20" width="227" height="462"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <splitView id="2440" customClass="BWSplitView">
+                                        <rect key="frame" x="0.0" y="25" width="227" height="457"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
                                             <customView id="2441">
-                                                <rect key="frame" x="0.0" y="0.0" width="227" height="461"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="227" height="225"/>
                                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                                 <subviews>
                                                     <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="2475">
-                                                        <rect key="frame" x="0.0" y="0.0" width="233" height="461"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <clipView key="contentView" id="O1q-1z-fzr">
-                                                            <rect key="frame" x="1" y="17" width="231" height="443"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="233" height="225"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <clipView key="contentView" id="f4R-mr-HAZ">
+                                                            <rect key="frame" x="1" y="17" width="231" height="207"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="2479" id="2478">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="231" height="19"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="231" height="207"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <size key="intercellSpacing" width="3" height="2"/>
                                                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                                     <tableColumns>
                                                                         <tableColumn width="228" minWidth="40" maxWidth="1000" id="2480">
-                                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Smart Filters">
+                                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Chytré filtry">
                                                                                 <font key="font" metaFont="smallSystem"/>
                                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                                 <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
@@ -79,7 +79,7 @@
                                                             <rect key="frame" x="1" y="119" width="223" height="15"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </scroller>
-                                                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="2476">
+                                                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="37" horizontal="NO" id="2476">
                                                             <rect key="frame" x="224" y="17" width="15" height="102"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </scroller>
@@ -91,7 +91,7 @@
                                                 </subviews>
                                             </customView>
                                             <customView id="2442">
-                                                <rect key="frame" x="0.0" y="462" width="227" height="0.0"/>
+                                                <rect key="frame" x="0.0" y="234" width="227" height="223"/>
                                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                             </customView>
                                         </subviews>
@@ -114,9 +114,9 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </splitView>
-                                    <customView id="2599" customClass="BWAnchoredButtonBar">
+                                    <customView id="2488" customClass="BWAnchoredButtonBar">
                                         <rect key="frame" x="0.0" y="0.0" width="227" height="23"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="selectedIndex">
                                                 <integer key="value" value="0"/>
@@ -130,37 +130,37 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                 <subviews>
                                     <splitView autosaveName="mainRightSplit" id="2443" customClass="BWSplitView">
-                                        <rect key="frame" x="0.0" y="20" width="525" height="462"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <rect key="frame" x="0.0" y="25" width="525" height="457"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
                                             <customView id="2444">
-                                                <rect key="frame" x="0.0" y="0.0" width="525" height="228"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="525" height="225"/>
                                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                                 <subviews>
                                                     <splitView autosaveName="customerProjectTaskSplit" dividerStyle="thin" vertical="YES" id="2446" customClass="BWSplitView">
-                                                        <rect key="frame" x="0.0" y="0.0" width="525" height="228"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="525" height="225"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
                                                             <customView id="2447">
-                                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="228"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="225"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="2226">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="228"/>
-                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                        <clipView key="contentView" id="rAr-9t-KAI">
-                                                                            <rect key="frame" x="1" y="17" width="1" height="195"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="225"/>
+                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                        <clipView key="contentView" id="glN-Fq-hi9">
+                                                                            <rect key="frame" x="1" y="17" width="1" height="192"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
                                                                                 <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="2230" id="2229" userLabel="CustomerListTableView">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="43" height="19"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="43" height="192"/>
                                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                                     <size key="intercellSpacing" width="3" height="2"/>
                                                                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                                                     <tableColumns>
                                                                                         <tableColumn width="40" minWidth="40" maxWidth="1000" id="2231">
-                                                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Customer">
+                                                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Zákazník">
                                                                                                 <font key="font" metaFont="smallSystem"/>
                                                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                                                 <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
@@ -178,10 +178,10 @@
                                                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                         </clipView>
                                                                         <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="2228">
-                                                                            <rect key="frame" x="1" y="212" width="0.0" height="15"/>
+                                                                            <rect key="frame" x="1" y="209" width="0.0" height="15"/>
                                                                             <autoresizingMask key="autoresizingMask"/>
                                                                         </scroller>
-                                                                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="2227">
+                                                                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="37" horizontal="NO" id="2227">
                                                                             <rect key="frame" x="224" y="17" width="15" height="102"/>
                                                                             <autoresizingMask key="autoresizingMask"/>
                                                                         </scroller>
@@ -193,25 +193,25 @@
                                                                 </subviews>
                                                             </customView>
                                                             <customView id="2449">
-                                                                <rect key="frame" x="1" y="0.0" width="261" height="228"/>
+                                                                <rect key="frame" x="1" y="0.0" width="261" height="225"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <scrollView horizontalLineScroll="18" horizontalPageScroll="10" verticalLineScroll="18" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="223">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="261" height="228"/>
-                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                        <clipView key="contentView" id="06w-4c-02f">
-                                                                            <rect key="frame" x="1" y="17" width="244" height="210"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="261" height="225"/>
+                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                        <clipView key="contentView" id="cAX-HC-yJe">
+                                                                            <rect key="frame" x="1" y="17" width="244" height="207"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
-                                                                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="firstColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" multipleSelection="NO" autosaveName="projecttable" rowHeight="16" headerView="2154" id="224" userLabel="ProjectListTableView">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="244" height="18"/>
+                                                                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="firstColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveName="projecttable" rowHeight="16" headerView="2154" id="224" userLabel="ProjectListTableView">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="244" height="207"/>
                                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                                     <size key="intercellSpacing" width="3" height="2"/>
                                                                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                                                     <tableColumns>
                                                                                         <tableColumn identifier="ProjectName" width="153" minWidth="40" maxWidth="1000" id="225">
-                                                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Project">
+                                                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Projekt">
                                                                                                 <font key="font" metaFont="smallSystem"/>
                                                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                                                 <color key="backgroundColor" white="0.33333299" alpha="1" colorSpace="calibratedWhite"/>
@@ -221,11 +221,10 @@
                                                                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                                             </textFieldCell>
-                                                                                            <sortDescriptor key="sortDescriptorPrototype" selector="compare:" sortKey="name"/>
                                                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                                                         </tableColumn>
                                                                                         <tableColumn identifier="TotalTime" editable="NO" width="85" minWidth="40" maxWidth="1000" id="226">
-                                                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="right" title="Total time">
+                                                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="right" title="Celkový čas">
                                                                                                 <font key="font" metaFont="smallSystem"/>
                                                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                                                 <color key="backgroundColor" white="0.33333299" alpha="1" colorSpace="calibratedWhite"/>
@@ -251,7 +250,7 @@
                                                                             <autoresizingMask key="autoresizingMask"/>
                                                                         </scroller>
                                                                         <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="2152">
-                                                                            <rect key="frame" x="245" y="17" width="15" height="210"/>
+                                                                            <rect key="frame" x="245" y="17" width="15" height="207"/>
                                                                             <autoresizingMask key="autoresizingMask"/>
                                                                         </scroller>
                                                                         <tableHeaderView key="headerView" id="2154">
@@ -262,25 +261,25 @@
                                                                 </subviews>
                                                             </customView>
                                                             <customView id="2448">
-                                                                <rect key="frame" x="263" y="0.0" width="262" height="228"/>
+                                                                <rect key="frame" x="263" y="0.0" width="262" height="225"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <scrollView horizontalLineScroll="18" horizontalPageScroll="10" verticalLineScroll="18" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="227">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="262" height="228"/>
-                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                        <clipView key="contentView" id="U7J-JG-W5p">
-                                                                            <rect key="frame" x="1" y="17" width="245" height="210"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="262" height="225"/>
+                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                        <clipView key="contentView" id="y1y-tI-z3p">
+                                                                            <rect key="frame" x="1" y="17" width="245" height="207"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
-                                                                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="firstColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" multipleSelection="NO" autosaveName="tasktable" rowHeight="16" headerView="2157" id="228" userLabel="TaskListTableView">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="245" height="18"/>
+                                                                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="firstColumnOnly" columnReordering="NO" multipleSelection="NO" autosaveName="tasktable" rowHeight="16" headerView="2157" id="228" userLabel="TaskListTableView">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="245" height="207"/>
                                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                                     <size key="intercellSpacing" width="3" height="2"/>
                                                                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                                                     <tableColumns>
-                                                                                        <tableColumn identifier="TaskName" width="153.5" minWidth="40" maxWidth="1000" id="229">
-                                                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Task">
+                                                                                        <tableColumn identifier="TaskName" width="154" minWidth="40" maxWidth="1000" id="229">
+                                                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Úloha">
                                                                                                 <font key="font" metaFont="smallSystem"/>
                                                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                                                 <color key="backgroundColor" white="0.33333299" alpha="1" colorSpace="calibratedWhite"/>
@@ -300,7 +299,7 @@
                                                                                             </connections>
                                                                                         </tableColumn>
                                                                                         <tableColumn identifier="TotalTime" editable="NO" width="85.25341796875" minWidth="62.25341796875" maxWidth="1000" id="230">
-                                                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="right" title="Total time">
+                                                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="right" title="Celkový čas">
                                                                                                 <font key="font" metaFont="smallSystem"/>
                                                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                                                 <color key="backgroundColor" white="0.33333299" alpha="1" colorSpace="calibratedWhite"/>
@@ -336,11 +335,11 @@
                                                                             <autoresizingMask key="autoresizingMask"/>
                                                                         </scroller>
                                                                         <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="2155">
-                                                                            <rect key="frame" x="246" y="17" width="15" height="210"/>
+                                                                            <rect key="frame" x="246" y="17" width="15" height="207"/>
                                                                             <autoresizingMask key="autoresizingMask"/>
                                                                         </scroller>
                                                                         <tableHeaderView key="headerView" id="2157">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="245" height="17"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="245.5" height="17"/>
                                                                             <autoresizingMask key="autoresizingMask"/>
                                                                         </tableHeaderView>
                                                                     </scrollView>
@@ -370,12 +369,12 @@
                                                 </subviews>
                                             </customView>
                                             <customView id="2445">
-                                                <rect key="frame" x="0.0" y="237" width="525" height="225"/>
+                                                <rect key="frame" x="0.0" y="234" width="525" height="223"/>
                                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                                 <subviews>
                                                     <splitView dividerStyle="thin" id="2451" customClass="BWSplitView">
-                                                        <rect key="frame" x="0.0" y="0.0" width="525" height="225"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="525" height="223"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
                                                             <predicateEditor verticalHuggingPriority="750" nestingMode="compound" rowHeight="25" id="2522">
                                                                 <rect key="frame" x="0.0" y="0.0" width="525" height="100"/>
@@ -385,17 +384,17 @@
                                                                         <popUpMenus>
                                                                             <menu id="2528">
                                                                                 <items>
-                                                                                    <menuItem title="Any" state="on" id="2530">
+                                                                                    <menuItem title="Cokoliv" state="on" id="2530">
                                                                                         <integer key="representedObject" value="2"/>
                                                                                     </menuItem>
-                                                                                    <menuItem title="All" id="2529">
+                                                                                    <menuItem title="Vše" id="2529">
                                                                                         <integer key="representedObject" value="1"/>
                                                                                     </menuItem>
                                                                                 </items>
                                                                             </menu>
                                                                             <menu id="2527">
                                                                                 <items>
-                                                                                    <menuItem title="of the following are true" state="on" id="2531"/>
+                                                                                    <menuItem title="z následujících jsou pravda" state="on" id="2531"/>
                                                                                 </items>
                                                                             </menu>
                                                                         </popUpMenus>
@@ -416,12 +415,12 @@
                                                                         <popUpMenus>
                                                                             <menu id="2533">
                                                                                 <items>
-                                                                                    <menuItem title="startTime" state="on" id="2535">
+                                                                                    <menuItem title="čas začátku" state="on" id="2535">
                                                                                         <expression key="representedObject" type="keyPath">
                                                                                             <string key="keyPath">startTime</string>
                                                                                         </expression>
                                                                                     </menuItem>
-                                                                                    <menuItem title="endTime" id="2534">
+                                                                                    <menuItem title="čas ukončení" id="2534">
                                                                                         <expression key="representedObject" type="keyPath">
                                                                                             <string key="keyPath">endTime</string>
                                                                                         </expression>
@@ -430,10 +429,10 @@
                                                                             </menu>
                                                                             <menu id="2532">
                                                                                 <items>
-                                                                                    <menuItem title="is greater than or equal to" state="on" id="2537">
+                                                                                    <menuItem title="je větší nebo rovno" state="on" id="2537">
                                                                                         <integer key="representedObject" value="3"/>
                                                                                     </menuItem>
-                                                                                    <menuItem title="is less than or equal to" id="2536">
+                                                                                    <menuItem title="je menší nebo rovno" id="2536">
                                                                                         <integer key="representedObject" value="1"/>
                                                                                     </menuItem>
                                                                                 </items>
@@ -450,7 +449,7 @@
                                                                         <popUpMenus>
                                                                             <menu id="2539">
                                                                                 <items>
-                                                                                    <menuItem title="Date" state="on" id="2540">
+                                                                                    <menuItem title="Datum" state="on" id="2540">
                                                                                         <expression key="representedObject" type="keyPath">
                                                                                             <string key="keyPath">Date</string>
                                                                                         </expression>
@@ -459,19 +458,19 @@
                                                                             </menu>
                                                                             <menu id="2538">
                                                                                 <items>
-                                                                                    <menuItem title="contains" state="on" id="2545">
+                                                                                    <menuItem title="obsahuje" state="on" id="2545">
                                                                                         <integer key="representedObject" value="99"/>
                                                                                     </menuItem>
-                                                                                    <menuItem title="begins with" id="2544">
+                                                                                    <menuItem title="začíná na" id="2544">
                                                                                         <integer key="representedObject" value="8"/>
                                                                                     </menuItem>
-                                                                                    <menuItem title="ends with" id="2543">
+                                                                                    <menuItem title="končí na" id="2543">
                                                                                         <integer key="representedObject" value="9"/>
                                                                                     </menuItem>
-                                                                                    <menuItem title="is" id="2542">
+                                                                                    <menuItem title="je" id="2542">
                                                                                         <integer key="representedObject" value="4"/>
                                                                                     </menuItem>
-                                                                                    <menuItem title="is not" id="2541">
+                                                                                    <menuItem title="není" id="2541">
                                                                                         <integer key="representedObject" value="5"/>
                                                                                     </menuItem>
                                                                                 </items>
@@ -510,7 +509,7 @@
                                                                         <popUpMenus>
                                                                             <menu id="2548">
                                                                                 <items>
-                                                                                    <menuItem title="Weekday" state="on" id="2549">
+                                                                                    <menuItem title="Den v týdnu" state="on" id="2549">
                                                                                         <expression key="representedObject" type="keyPath">
                                                                                             <string key="keyPath">Weekday</string>
                                                                                         </expression>
@@ -519,53 +518,53 @@
                                                                             </menu>
                                                                             <menu id="2547">
                                                                                 <items>
-                                                                                    <menuItem title="is" state="on" id="2553">
+                                                                                    <menuItem title="je" state="on" id="2553">
                                                                                         <integer key="representedObject" value="4"/>
                                                                                     </menuItem>
-                                                                                    <menuItem title="is not" id="2552">
+                                                                                    <menuItem title="není" id="2552">
                                                                                         <integer key="representedObject" value="5"/>
                                                                                     </menuItem>
-                                                                                    <menuItem title="is less than or equal to" id="2551">
+                                                                                    <menuItem title="je menší nebo rovno" id="2551">
                                                                                         <integer key="representedObject" value="1"/>
                                                                                     </menuItem>
-                                                                                    <menuItem title="is greater than or equal to" id="2550">
+                                                                                    <menuItem title="je větší nebo rovno" id="2550">
                                                                                         <integer key="representedObject" value="3"/>
                                                                                     </menuItem>
                                                                                 </items>
                                                                             </menu>
                                                                             <menu id="2546">
                                                                                 <items>
-                                                                                    <menuItem title="Monday" state="on" tag="2" id="2560">
+                                                                                    <menuItem title="Pondělí" state="on" tag="2" id="2560">
                                                                                         <expression key="representedObject" type="constant">
                                                                                             <string key="constantValue">Monday</string>
                                                                                         </expression>
                                                                                     </menuItem>
-                                                                                    <menuItem title="Tuesday" tag="3" id="2559">
+                                                                                    <menuItem title="Úterý" tag="3" id="2559">
                                                                                         <expression key="representedObject" type="constant">
                                                                                             <string key="constantValue">Tuesday</string>
                                                                                         </expression>
                                                                                     </menuItem>
-                                                                                    <menuItem title="Wednesday" tag="4" id="2558">
+                                                                                    <menuItem title="Středa" tag="4" id="2558">
                                                                                         <expression key="representedObject" type="constant">
                                                                                             <string key="constantValue">Wednesday</string>
                                                                                         </expression>
                                                                                     </menuItem>
-                                                                                    <menuItem title="Thursday" tag="5" id="2557">
+                                                                                    <menuItem title="Čtvrtek" tag="5" id="2557">
                                                                                         <expression key="representedObject" type="constant">
                                                                                             <string key="constantValue">Thursday</string>
                                                                                         </expression>
                                                                                     </menuItem>
-                                                                                    <menuItem title="Friday" tag="6" id="2556">
+                                                                                    <menuItem title="Pátek" tag="6" id="2556">
                                                                                         <expression key="representedObject" type="constant">
                                                                                             <string key="constantValue">Friday</string>
                                                                                         </expression>
                                                                                     </menuItem>
-                                                                                    <menuItem title="Saturday" tag="7" id="2555">
+                                                                                    <menuItem title="Sobota" tag="7" id="2555">
                                                                                         <expression key="representedObject" type="constant">
                                                                                             <string key="constantValue">Saturday</string>
                                                                                         </expression>
                                                                                     </menuItem>
-                                                                                    <menuItem title="Sunday" tag="1" id="2554">
+                                                                                    <menuItem title="Neděle" tag="1" id="2554">
                                                                                         <expression key="representedObject" type="constant">
                                                                                             <string key="constantValue">Sunday</string>
                                                                                         </expression>
@@ -582,18 +581,18 @@
                                                                 </connections>
                                                             </predicateEditor>
                                                             <customView wantsLayer="YES" id="2453">
-                                                                <rect key="frame" x="0.0" y="101" width="525" height="124"/>
+                                                                <rect key="frame" x="0.0" y="101" width="525" height="122"/>
                                                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="18" horizontalPageScroll="0.0" verticalLineScroll="18" verticalPageScroll="0.0" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="252">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="525" height="124"/>
-                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                        <clipView key="contentView" id="eN7-lc-hmT">
-                                                                            <rect key="frame" x="0.0" y="17" width="525" height="107"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="525" height="122"/>
+                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                        <clipView key="contentView" id="cvF-hU-wiD">
+                                                                            <rect key="frame" x="0.0" y="17" width="525" height="105"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
                                                                                 <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" multipleSelection="NO" autosaveName="workperiodtable" rowHeight="16" headerView="2160" id="253" userLabel="WorkEntryListTableView">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="525" height="18"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="525" height="105"/>
                                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                                     <size key="intercellSpacing" width="3" height="2"/>
                                                                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -601,7 +600,7 @@
                                                                                     <color key="gridColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
                                                                                     <tableColumns>
                                                                                         <tableColumn identifier="Date" editable="NO" width="64" minWidth="40" maxWidth="1000" id="254">
-                                                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Work Date">
+                                                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Datum práce">
                                                                                                 <font key="font" metaFont="smallSystem"/>
                                                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                                                 <color key="backgroundColor" white="0.33333299" alpha="1" colorSpace="calibratedWhite"/>
@@ -622,7 +621,7 @@
                                                                                             </connections>
                                                                                         </tableColumn>
                                                                                         <tableColumn identifier="startTime" editable="NO" width="60" minWidth="40" maxWidth="1000" id="255">
-                                                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Start time">
+                                                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Začátek">
                                                                                                 <font key="font" metaFont="smallSystem"/>
                                                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                                                 <color key="backgroundColor" white="0.33333299" alpha="1" colorSpace="calibratedWhite"/>
@@ -654,7 +653,7 @@
                                                                                             </connections>
                                                                                         </tableColumn>
                                                                                         <tableColumn identifier="EndTime" editable="NO" width="55" minWidth="4" maxWidth="1000" id="256">
-                                                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="End time">
+                                                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Konec">
                                                                                                 <font key="font" metaFont="smallSystem"/>
                                                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -675,7 +674,7 @@
                                                                                             </connections>
                                                                                         </tableColumn>
                                                                                         <tableColumn identifier="Duration" editable="NO" width="55" minWidth="10" maxWidth="1000" id="262">
-                                                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="right" title="Duration">
+                                                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="right" title="Trvání">
                                                                                                 <font key="font" metaFont="smallSystem"/>
                                                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -696,7 +695,7 @@
                                                                                             </connections>
                                                                                         </tableColumn>
                                                                                         <tableColumn identifier="Project" editable="NO" width="74" minWidth="10" maxWidth="3.4028234663852886e+38" id="450">
-                                                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Project">
+                                                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Projekt">
                                                                                                 <font key="font" metaFont="smallSystem"/>
                                                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -712,7 +711,7 @@
                                                                                             </connections>
                                                                                         </tableColumn>
                                                                                         <tableColumn identifier="Task" editable="NO" width="66" minWidth="10" maxWidth="3.4028234663852886e+38" id="454">
-                                                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Task">
+                                                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Úloha">
                                                                                                 <font key="font" metaFont="smallSystem"/>
                                                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -728,7 +727,7 @@
                                                                                             </connections>
                                                                                         </tableColumn>
                                                                                         <tableColumn identifier="Comment" editable="NO" width="130" minWidth="10" maxWidth="3.4028234663852886e+38" id="1268">
-                                                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Comment">
+                                                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Poznámka">
                                                                                                 <font key="font" metaFont="smallSystem"/>
                                                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -815,23 +814,12 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </splitView>
-                                    <customView id="2600" customClass="BWAnchoredButtonBar">
-                                        <rect key="frame" x="0.0" y="0.0" width="525" height="23"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <customView id="2489" customClass="BWAnchoredButtonBar">
+                                        <rect key="frame" x="0.0" y="0.0" width="525" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <button verticalHuggingPriority="750" id="2490" customClass="BWAnchoredButton">
-                                                <rect key="frame" x="-1" y="-1" width="32" height="24"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSAddTemplate" imagePosition="only" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2491" customClass="BWAnchoredButtonCell">
-                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                    <font key="font" metaFont="smallSystem"/>
-                                                </buttonCell>
-                                                <connections>
-                                                    <action selector="clickedAddTimePeriod:" target="211" id="2492"/>
-                                                </connections>
-                                            </button>
                                             <button verticalHuggingPriority="750" id="2493" customClass="BWAnchoredButton">
-                                                <rect key="frame" x="30" y="-1" width="32" height="24"/>
+                                                <rect key="frame" x="31" y="0.0" width="32" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSRemoveTemplate" imagePosition="only" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2494" customClass="BWAnchoredButtonCell">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -841,10 +829,21 @@
                                                     <action selector="clickedDeleteWorkPeriod:" target="211" id="2495"/>
                                                 </connections>
                                             </button>
+                                            <button verticalHuggingPriority="750" id="2490" customClass="BWAnchoredButton">
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSAddTemplate" imagePosition="only" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2491" customClass="BWAnchoredButtonCell">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="smallSystem"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="clickedAddTimePeriod:" target="211" id="2492"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="selectedIndex">
-                                                <integer key="value" value="0"/>
+                                                <integer key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </customView>
@@ -874,29 +873,25 @@
             </view>
             <toolbar key="toolbar" implicitIdentifier="20E313C0-55DC-4227-9570-175953087B02" displayMode="iconAndLabel" sizeMode="regular" id="2417">
                 <allowedToolbarItems>
-                    <toolbarItem implicitItemIdentifier="7ACADA43-7A1B-48B8-9CB0-1CD099C508F5" explicitItemIdentifier="StartToolbarButton" label="Start" paletteLabel="Start/Stop" tag="-1" image="playtool" id="2425">
+                    <toolbarItem implicitItemIdentifier="7ACADA43-7A1B-48B8-9CB0-1CD099C508F5" explicitItemIdentifier="StartToolbarButton" label="Spustit" paletteLabel="Spustit/Zastavit" tag="-1" image="playtool" id="2425">
                         <connections>
                             <action selector="clickedStartStopTimer:" target="211" id="2431"/>
                         </connections>
                     </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="1C68BB05-59FE-4F1F-94F4-C7E5A94A1DF4" explicitItemIdentifier="NewProjectButton" label="New Project" paletteLabel="New Project" tag="-1" image="addprojecttool" visibilityPriority="2" id="2426">
+                    <toolbarItem implicitItemIdentifier="1C68BB05-59FE-4F1F-94F4-C7E5A94A1DF4" explicitItemIdentifier="NewProjectButton" label="Nový projekt" paletteLabel="Nový projekt" tag="-1" image="addprojecttool" visibilityPriority="2" id="2426">
                         <connections>
                             <action selector="clickedAddProject:" target="211" id="2433"/>
                         </connections>
                     </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="A8AC4029-C669-4EE7-90FF-C0099D7A6963" explicitItemIdentifier="NewTaskToolbarButton" label="New Task" paletteLabel="New Task" tag="-1" image="addtasktool" id="2427">
+                    <toolbarItem implicitItemIdentifier="A8AC4029-C669-4EE7-90FF-C0099D7A6963" explicitItemIdentifier="NewTaskToolbarButton" label="Nová úloha" paletteLabel="Nová úloha" tag="-1" image="addtasktool" id="2427">
                         <connections>
                             <action selector="clickedAddTask:" target="211" id="2434"/>
                         </connections>
                     </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="2421">
-                        <connections>
-                            <action selector="print:" target="21" id="2590"/>
-                        </connections>
-                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="2421"/>
                     <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="2422"/>
                     <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="2423"/>
-                    <toolbarItem implicitItemIdentifier="578BC5CC-D150-40B7-BA3D-B5B0C01871DB" explicitItemIdentifier="FilterComments Box" label="" paletteLabel="Filter Comments" id="2430">
+                    <toolbarItem implicitItemIdentifier="578BC5CC-D150-40B7-BA3D-B5B0C01871DB" explicitItemIdentifier="FilterComments Box" label="" paletteLabel="Filtrovat poznámky" id="2430">
                         <nil key="toolTip"/>
                         <size key="minSize" width="96" height="22"/>
                         <size key="maxSize" width="96" height="22"/>
@@ -935,13 +930,13 @@
                 <menuItem title="NewApplication" id="56">
                     <menu key="submenu" title="NewApplication" systemMenu="apple" id="57">
                         <items>
-                            <menuItem title="About Time Tracker" id="58">
+                            <menuItem title="Co je Time Tracker" id="58">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
                                     <action selector="orderFrontStandardAboutPanel:" target="-2" id="142"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Check for updates..." id="603">
+                            <menuItem title="Ověřit aktualizace…" id="603">
                                 <connections>
                                     <action selector="checkForUpdates:" target="591" id="604"/>
                                 </connections>
@@ -949,7 +944,7 @@
                             <menuItem isSeparatorItem="YES" id="196">
                                 <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                             </menuItem>
-                            <menuItem title="Preferences…" keyEquivalent="," id="129">
+                            <menuItem title="Předvolby…" keyEquivalent="," id="129">
                                 <connections>
                                     <action selector="makeKeyAndOrderFront:" target="592" id="638"/>
                                 </connections>
@@ -957,24 +952,24 @@
                             <menuItem isSeparatorItem="YES" id="143">
                                 <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                             </menuItem>
-                            <menuItem title="Services" id="131">
-                                <menu key="submenu" title="Services" systemMenu="services" id="130"/>
+                            <menuItem title="Služby" id="131">
+                                <menu key="submenu" title="Služby" systemMenu="services" id="130"/>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="144">
                                 <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                             </menuItem>
-                            <menuItem title="Hide Time Tracker" keyEquivalent="h" id="134">
+                            <menuItem title="Skrýt Time Tracker" keyEquivalent="h" id="134">
                                 <connections>
                                     <action selector="hide:" target="-2" id="152"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Hide Others" keyEquivalent="h" id="145">
+                            <menuItem title="Skrýt ostatní" keyEquivalent="h" id="145">
                                 <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
                                 <connections>
                                     <action selector="hideOtherApplications:" target="-2" id="146"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Show All" id="150">
+                            <menuItem title="Zobrazit vše" id="150">
                                 <connections>
                                     <action selector="unhideAllApplications:" target="-2" id="153"/>
                                 </connections>
@@ -982,7 +977,7 @@
                             <menuItem isSeparatorItem="YES" id="149">
                                 <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                             </menuItem>
-                            <menuItem title="Quit Time Tracker" keyEquivalent="q" id="136">
+                            <menuItem title="Ukončit Time Tracker" keyEquivalent="q" id="136">
                                 <connections>
                                     <action selector="terminate:" target="-2" id="139"/>
                                 </connections>
@@ -990,21 +985,21 @@
                         </items>
                     </menu>
                 </menuItem>
-                <menuItem title="File" id="332">
-                    <menu key="submenu" title="File" id="333">
+                <menuItem title="Soubor" id="332">
+                    <menu key="submenu" title="Soubor" id="333">
                         <items>
-                            <menuItem title="New Project" keyEquivalent="N" id="350">
+                            <menuItem title="Nový projekt" keyEquivalent="N" id="350">
                                 <connections>
                                     <action selector="clickedAddProject:" target="211" id="352"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="New Task" keyEquivalent="n" id="351">
+                            <menuItem title="Nová úloha" keyEquivalent="n" id="351">
                                 <connections>
                                     <action selector="clickedAddTask:" target="211" id="353"/>
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="1362"/>
-                            <menuItem title="Export..." keyEquivalent="e" id="1361">
+                            <menuItem title="Exportovat…" keyEquivalent="e" id="1361">
                                 <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
                                 <connections>
                                     <action selector="actionExport:" target="211" id="1363"/>
@@ -1013,12 +1008,12 @@
                             <menuItem isSeparatorItem="YES" id="334">
                                 <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                             </menuItem>
-                            <menuItem title="Page Setup…" keyEquivalent="P" id="342">
+                            <menuItem title="Vzhled stránky…" keyEquivalent="P" id="342">
                                 <connections>
                                     <action selector="runPageLayout:" target="-1" id="349"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Print…" keyEquivalent="p" id="346">
+                            <menuItem title="Tisknout…" keyEquivalent="p" id="346">
                                 <connections>
                                     <action selector="print:" target="-1" id="347"/>
                                 </connections>
@@ -1026,15 +1021,15 @@
                         </items>
                     </menu>
                 </menuItem>
-                <menuItem title="Edit" id="163">
-                    <menu key="submenu" title="Edit" id="169">
+                <menuItem title="Úpravy" id="163">
+                    <menu key="submenu" title="Úpravy" id="169">
                         <items>
-                            <menuItem title="Undo" keyEquivalent="z" id="158">
+                            <menuItem title="Odvolat akci" keyEquivalent="z" id="158">
                                 <connections>
                                     <action selector="undo:" target="-1" id="180"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Redo" keyEquivalent="Z" id="173">
+                            <menuItem title="Opakovat akci" keyEquivalent="Z" id="173">
                                 <connections>
                                     <action selector="redo:" target="-1" id="178"/>
                                 </connections>
@@ -1042,22 +1037,22 @@
                             <menuItem isSeparatorItem="YES" id="156">
                                 <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                             </menuItem>
-                            <menuItem title="Cut" keyEquivalent="x" id="160">
+                            <menuItem title="Vyjmout" keyEquivalent="x" id="160">
                                 <connections>
                                     <action selector="cut:" target="-1" id="175"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Copy" keyEquivalent="c" id="157">
+                            <menuItem title="Kopírovat" keyEquivalent="c" id="157">
                                 <connections>
                                     <action selector="copy:" target="-1" id="181"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Paste" keyEquivalent="v" id="171">
+                            <menuItem title="Vložit" keyEquivalent="v" id="171">
                                 <connections>
                                     <action selector="paste:" target="-1" id="176"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Select All" keyEquivalent="a" id="172">
+                            <menuItem title="Vybrat vše" keyEquivalent="a" id="172">
                                 <connections>
                                     <action selector="selectAll:" target="-1" id="179"/>
                                 </connections>
@@ -1065,7 +1060,7 @@
                             <menuItem isSeparatorItem="YES" id="174">
                                 <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                             </menuItem>
-                            <menuItem title="Delete" id="266">
+                            <menuItem title="Smazat" id="266">
                                 <string key="keyEquivalent" base64-UTF8="YES">
 CA
 </string>
@@ -1077,10 +1072,10 @@ CA
                         </items>
                     </menu>
                 </menuItem>
-                <menuItem title="Project/Task" id="316">
-                    <menu key="submenu" title="Project/Task" id="317">
+                <menuItem title="Projekt/Úloha" id="316">
+                    <menu key="submenu" title="Projekt/Úloha" id="317">
                         <items>
-                            <menuItem title="Start Timer" keyEquivalent="t" id="318">
+                            <menuItem title="Spustit časomíru" keyEquivalent="t" id="318">
                                 <connections>
                                     <action selector="clickedStartStopTimer:" target="211" id="326"/>
                                 </connections>
@@ -1088,15 +1083,15 @@ CA
                         </items>
                     </menu>
                 </menuItem>
-                <menuItem title="Window" id="19">
-                    <menu key="submenu" title="Window" systemMenu="window" id="24">
+                <menuItem title="Okno" id="19">
+                    <menu key="submenu" title="Okno" systemMenu="window" id="24">
                         <items>
-                            <menuItem title="Minimize" keyEquivalent="m" id="23">
+                            <menuItem title="Minimalizovat" keyEquivalent="m" id="23">
                                 <connections>
                                     <action selector="performMiniaturize:" target="-1" id="37"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Zoom" id="197">
+                            <menuItem title="Přepnout velikost" id="197">
                                 <connections>
                                     <action selector="performZoom:" target="-1" id="198"/>
                                 </connections>
@@ -1110,7 +1105,7 @@ CA
                             <menuItem isSeparatorItem="YES" id="92">
                                 <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                             </menuItem>
-                            <menuItem title="Bring All to Front" id="5">
+                            <menuItem title="Převést vše do popředí" id="5">
                                 <connections>
                                     <action selector="arrangeInFront:" target="-1" id="39"/>
                                 </connections>
@@ -1118,10 +1113,10 @@ CA
                         </items>
                     </menu>
                 </menuItem>
-                <menuItem title="Help" id="103">
-                    <menu key="submenu" title="Help" id="106">
+                <menuItem title="Nápověda" id="103">
+                    <menu key="submenu" title="Nápověda" id="106">
                         <items>
-                            <menuItem title="Time Tracker Help" keyEquivalent="?" id="111">
+                            <menuItem title="Nápověda pro Time Tracker" keyEquivalent="?" id="111">
                                 <connections>
                                     <action selector="showHelp:" target="-1" id="122"/>
                                 </connections>
@@ -1156,19 +1151,18 @@ CA
                 <outlet property="workPeriodController" destination="792" id="794"/>
             </connections>
         </customObject>
-        <window title="Change Work Period" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="273" userLabel="Edit Work Period Panel" customClass="NSPanel">
+        <window title="Zmenit pracovní dobu" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="273" userLabel="Edit Work Period Panel" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" utility="YES" HUD="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="299" y="226" width="411" height="331"/>
+            <rect key="contentRect" x="299" y="237" width="411" height="320"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
-            <value key="minSize" type="size" width="300" height="300"/>
             <view key="contentView" id="274">
-                <rect key="frame" x="0.0" y="0.0" width="411" height="331"/>
+                <rect key="frame" x="0.0" y="0.0" width="411" height="320"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <datePicker verticalHuggingPriority="750" id="275">
-                        <rect key="frame" x="157" y="289" width="237" height="27"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <rect key="frame" x="157" y="278" width="237" height="27"/>
+                        <autoresizingMask key="autoresizingMask"/>
                         <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="2110">
                             <font key="font" metaFont="system"/>
                             <date key="date" timeIntervalSinceReferenceDate="2592000">
@@ -1179,27 +1173,27 @@ CA
                             <datePickerElements key="datePickerElements" year="YES" month="YES" day="YES" hour="YES" minute="YES" second="YES"/>
                         </datePickerCell>
                     </datePicker>
-                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" id="276">
-                        <rect key="frame" x="73" y="294" width="79" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Start time" id="2111">
+                    <textField verticalHuggingPriority="750" id="276">
+                        <rect key="frame" x="73" y="283" width="79" height="17"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Začátek:" id="2111">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" id="277">
-                        <rect key="frame" x="73" y="261" width="79" height="20"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="End time" id="2112">
+                    <textField verticalHuggingPriority="750" id="277">
+                        <rect key="frame" x="73" y="250" width="79" height="20"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Konec:" id="2112">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <datePicker verticalHuggingPriority="750" id="278">
-                        <rect key="frame" x="157" y="259" width="237" height="27"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <rect key="frame" x="157" y="248" width="237" height="27"/>
+                        <autoresizingMask key="autoresizingMask"/>
                         <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="2113">
                             <font key="font" metaFont="system"/>
                             <date key="date" timeIntervalSinceReferenceDate="86400">
@@ -1211,11 +1205,11 @@ CA
                         </datePickerCell>
                     </datePicker>
                     <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="441">
-                        <rect key="frame" x="20" y="116" width="371" height="135"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <clipView key="contentView" id="hGO-0p-1CM">
+                        <rect key="frame" x="20" y="105" width="371" height="135"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <clipView key="contentView" id="poe-vt-g8D">
                             <rect key="frame" x="1" y="1" width="354" height="133"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <textView findStyle="panel" continuousSpellChecking="YES" allowsDocumentBackgroundColorChange="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" quoteSubstitution="YES" linkDetection="YES" dashSubstitution="YES" spellingCorrection="YES" grammarChecking="YES" smartInsertDelete="YES" id="444">
                                     <rect key="frame" x="0.0" y="0.0" width="354" height="133"/>
@@ -1530,16 +1524,16 @@ CA
                         </scroller>
                     </scrollView>
                     <popUpButton verticalHuggingPriority="750" id="1100">
-                        <rect key="frame" x="164" y="84" width="230" height="26"/>
+                        <rect key="frame" x="164" y="73" width="230" height="26"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <popUpButtonCell key="cell" type="push" title="Project" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" selectedItem="1103" id="2116">
+                        <popUpButtonCell key="cell" type="push" title="Projekt" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" selectedItem="1103" id="2116">
                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="menu"/>
+                            <font key="font" metaFont="system"/>
                             <menu key="menu" title="OtherViews" id="1102">
                                 <items>
-                                    <menuItem title="Project" state="on" id="1103"/>
-                                    <menuItem title="Item 2" id="1104"/>
-                                    <menuItem title="Item 3" id="1105"/>
+                                    <menuItem title="Projekt" state="on" id="1103"/>
+                                    <menuItem title="Položka 2" id="1104"/>
+                                    <menuItem title="Položka 3" id="1105"/>
                                 </items>
                             </menu>
                         </popUpButtonCell>
@@ -1548,65 +1542,64 @@ CA
                         </connections>
                     </popUpButton>
                     <popUpButton verticalHuggingPriority="750" id="1106">
-                        <rect key="frame" x="164" y="54" width="230" height="26"/>
+                        <rect key="frame" x="164" y="43" width="230" height="26"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <popUpButtonCell key="cell" type="push" title="Task" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" selectedItem="1109" id="2117">
+                        <popUpButtonCell key="cell" type="push" title="Úloha" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" selectedItem="1109" id="2117">
                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="menu"/>
+                            <font key="font" metaFont="system"/>
                             <menu key="menu" title="OtherViews" id="1108">
                                 <items>
-                                    <menuItem title="Task" state="on" id="1109"/>
-                                    <menuItem title="Item 2" id="1110"/>
-                                    <menuItem title="Item 3" id="1111"/>
+                                    <menuItem title="Úloha" state="on" id="1109"/>
+                                    <menuItem title="Položka 2" id="1110"/>
+                                    <menuItem title="Položka 3" id="1111"/>
                                 </items>
                             </menu>
                         </popUpButtonCell>
                     </popUpButton>
                     <textField verticalHuggingPriority="750" id="1112">
-                        <rect key="frame" x="17" y="90" width="135" height="17"/>
+                        <rect key="frame" x="17" y="79" width="135" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Project" id="2118">
+                        <textFieldCell key="cell" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Projekt:" id="2118">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlDarkShadowColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <textField verticalHuggingPriority="750" id="1114">
-                        <rect key="frame" x="17" y="58" width="135" height="17"/>
+                        <rect key="frame" x="17" y="47" width="135" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Task" id="2119">
+                        <textFieldCell key="cell" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Úloha:" id="2119">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlDarkShadowColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <button verticalHuggingPriority="750" id="2591">
-                        <rect key="frame" x="230" y="12" width="97" height="32"/>
+                    <button verticalHuggingPriority="750" id="2267" customClass="BWTransparentButton">
+                        <rect key="frame" x="75" y="11" width="81" height="28"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="push" title="OK (⌘↩)" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2592">
+                        <buttonCell key="cell" type="push" title="Zrušit" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2268" customClass="BWTransparentButtonCell">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                            <string key="keyEquivalent" base64-UTF8="YES">
-DQ
-</string>
-                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="okClicked:" target="211" id="2596"/>
-                        </connections>
-                    </button>
-                    <button verticalHuggingPriority="750" id="2593">
-                        <rect key="frame" x="70" y="12" width="96" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2594">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" metaFont="smallSystem"/>
                             <string key="keyEquivalent" base64-UTF8="YES">
 Gw
 </string>
                         </buttonCell>
                         <connections>
-                            <action selector="cancelClicked:" target="211" id="2595"/>
+                            <action selector="cancelClicked:" target="211" id="2269"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" id="2496" customClass="BWTransparentButton">
+                        <rect key="frame" x="233" y="11" width="81" height="28"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="Budiž" bezelStyle="rounded" alignment="center" controlSize="small" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2497" customClass="BWTransparentButtonCell">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="okClicked:" target="211" id="2498"/>
                         </connections>
                     </button>
                 </subviews>
@@ -1615,7 +1608,7 @@ Gw
                 <outlet property="delegate" destination="211" id="286"/>
             </connections>
         </window>
-        <window title="Idle notification" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="287" userLabel="Idle Notification" customClass="NSPanel">
+        <window title="Upozornění na nečinnost" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="287" userLabel="Idle Notification" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="342" y="444" width="339" height="122"/>
@@ -1624,19 +1617,19 @@ Gw
                 <rect key="frame" x="0.0" y="0.0" width="339" height="122"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" id="289">
+                    <textField verticalHuggingPriority="750" id="289">
                         <rect key="frame" x="17" y="85" width="305" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="You been idle!" id="2120">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Nic neděláte!" id="2120">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" id="291">
+                    <textField verticalHuggingPriority="750" id="291">
                         <rect key="frame" x="17" y="60" width="305" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Do you want to count this time?" id="2121">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Přejete si započíst i tento čas?" id="2121">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -1644,8 +1637,8 @@ Gw
                     </textField>
                     <button verticalHuggingPriority="750" id="292">
                         <rect key="frame" x="82" y="12" width="82" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="push" title="Yes" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="2122">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <buttonCell key="cell" type="push" title="Ano" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="2122">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -1655,8 +1648,8 @@ Gw
                     </button>
                     <button verticalHuggingPriority="750" id="293">
                         <rect key="frame" x="178" y="12" width="82" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="push" title="No" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="2123">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <buttonCell key="cell" type="push" title="Ne" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="2123">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -1666,11 +1659,10 @@ Gw
                     </button>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="999.5" y="1036"/>
         </window>
         <userDefaultsController representsSharedInstance="YES" id="445" userLabel="Shared User Defaults Controller"/>
         <customObject id="591" userLabel="SUUpdater" customClass="SUUpdater"/>
-        <window title="Time Tracker Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="592" userLabel="Preferences">
+        <window title="Předvolby pro Time Tracker" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="592" userLabel="Preferences">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="302" y="228" width="267" height="313"/>
@@ -1682,8 +1674,8 @@ Gw
                 <subviews>
                     <button id="596">
                         <rect key="frame" x="18" y="277" width="231" height="18"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="check" title="Check for new release on startup" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="2126">
+                        <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="Ověřovat aktualizace při spuštění" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="2126">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -1693,13 +1685,13 @@ Gw
                     </button>
                     <popUpButton verticalHuggingPriority="750" id="595">
                         <rect key="frame" x="88" y="247" width="162" height="26"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <popUpButtonCell key="cell" type="push" title="Stable Releases" alternateTitle="http://time-tracker-mac.googlecode.com/hg/appcast/timetracker-stable.xml" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="600" id="2125">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <popUpButtonCell key="cell" type="push" alternateTitle="http://time-tracker-mac.googlecode.com/hg/appcast/timetracker-stable.xml" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" id="2125">
                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="menu"/>
+                            <font key="font" metaFont="system"/>
                             <menu key="menu" title="OtherViews" id="599">
                                 <items>
-                                    <menuItem title="Stable Releases" state="on" id="600">
+                                    <menuItem title="http://time-tracker-mac.googlecode.com/hg/appcast/timetracker-stable.xml" id="600">
                                         <attributedString key="attributedTitle">
                                             <fragment content="Stable Releases">
                                                 <attributes>
@@ -1709,7 +1701,7 @@ Gw
                                             </fragment>
                                         </attributedString>
                                     </menuItem>
-                                    <menuItem title="Beta Releases" id="601">
+                                    <menuItem title="http://time-tracker-mac.googlecode.com/hg/appcast/timetracker-beta.xml" id="601">
                                         <attributedString key="attributedTitle">
                                             <fragment content="Beta Releases">
                                                 <attributes>
@@ -1719,7 +1711,7 @@ Gw
                                             </fragment>
                                         </attributedString>
                                     </menuItem>
-                                    <menuItem title="Update Test Releases (dont use)" id="2500">
+                                    <menuItem title="http://time-tracker-mac.googlecode.com/hg/appcast/timetracker-test.xml" id="2500">
                                         <attributedString key="attributedTitle">
                                             <fragment content="Update Test Releases (dont use)">
                                                 <attributes>
@@ -1737,33 +1729,33 @@ Gw
                             <binding destination="211" name="selectedValue" keyPath="updateURL" id="2502"/>
                         </connections>
                     </popUpButton>
-                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" id="594">
+                    <textField verticalHuggingPriority="750" id="594">
                         <rect key="frame" x="17" y="253" width="69" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Check for " id="2124">
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Ověřovat:" id="2124">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <box title="CSV Export" borderType="line" id="1404">
+                    <box title="Exportovat do CSV" borderType="line" id="1404">
                         <rect key="frame" x="17" y="130" width="233" height="115"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <view key="contentView" id="O6W-5h-HjO">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <view key="contentView">
                             <rect key="frame" x="1" y="1" width="231" height="99"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <textField verticalHuggingPriority="750" id="1405">
                                     <rect key="frame" x="15" y="48" width="130" height="17"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Separator Character" id="2127">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Oddělovač:" id="2127">
                                         <font key="font" metaFont="system"/>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
                                 <comboBox verticalHuggingPriority="750" id="1407">
-                                    <rect key="frame" x="154" y="43" width="62" height="26"/>
+                                    <rect key="frame" x="93" y="43" width="100" height="26"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" title=";" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="2128">
                                         <font key="font" metaFont="system"/>
@@ -1779,9 +1771,9 @@ Gw
                                     </connections>
                                 </comboBox>
                                 <button id="1409">
-                                    <rect key="frame" x="16" y="73" width="183" height="18"/>
+                                    <rect key="frame" x="16" y="73" width="199" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <buttonCell key="cell" type="check" title="Automatically export CSV" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="2129">
+                                    <buttonCell key="cell" type="check" title="Automatický export do CSV" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="2129">
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
@@ -1792,15 +1784,15 @@ Gw
                                 <textField verticalHuggingPriority="750" id="1411">
                                     <rect key="frame" x="15" y="23" width="61" height="17"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Filename" id="2130">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Soubor:" id="2130">
                                         <font key="font" metaFont="system"/>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
                                 <textField verticalHuggingPriority="750" id="1413">
-                                    <rect key="frame" x="81" y="20" width="109" height="22"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <rect key="frame" x="93" y="20" width="97" height="22"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="2131">
                                         <font key="font" metaFont="system"/>
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -1817,8 +1809,8 @@ Gw
                                 </textField>
                                 <button verticalHuggingPriority="750" id="1415">
                                     <rect key="frame" x="187" y="13" width="44" height="32"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <buttonCell key="cell" type="push" title="..." bezelStyle="rounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2132">
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                    <buttonCell key="cell" type="push" title="…" bezelStyle="rounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2132">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
@@ -1834,14 +1826,14 @@ Gw
                     <textField verticalHuggingPriority="750" id="1719">
                         <rect key="frame" x="17" y="109" width="178" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="# of last tasks in menubar" id="2133">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Úlohy v řádku nabídek:" id="2133">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <textField verticalHuggingPriority="750" id="1721">
-                        <rect key="frame" x="195" y="107" width="36" height="22"/>
+                        <rect key="frame" x="177" y="107" width="54" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="2134">
                             <font key="font" metaFont="system"/>
@@ -1869,9 +1861,9 @@ Gw
                         </connections>
                     </stepper>
                     <button id="1783">
-                        <rect key="frame" x="18" y="85" width="176" height="18"/>
+                        <rect key="frame" x="18" y="85" width="231" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="check" title="Show time in menubar" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="2136">
+                        <buttonCell key="cell" type="check" title="Zobrazit čas v řádku nabídek" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="2136">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -1886,14 +1878,14 @@ Gw
                     <textField verticalHuggingPriority="750" id="1789">
                         <rect key="frame" x="17" y="62" width="148" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Idle Timeout (seconds)" id="2137">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Hranice nečinnosti (s):" id="2137">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <textField verticalHuggingPriority="750" id="1791">
-                        <rect key="frame" x="195" y="60" width="36" height="22"/>
+                        <rect key="frame" x="177" y="60" width="54" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="2138">
                             <font key="font" metaFont="system"/>
@@ -1918,9 +1910,9 @@ Gw
                         </connections>
                     </stepper>
                     <button id="1795">
-                        <rect key="frame" x="18" y="38" width="185" height="18"/>
+                        <rect key="frame" x="18" y="38" width="231" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="check" title="Computer sleep detection" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="2140">
+                        <buttonCell key="cell" type="check" title="Rozpoznat uspání počítače" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="2140">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -1933,9 +1925,9 @@ Gw
                         </connections>
                     </button>
                     <button id="2565">
-                        <rect key="frame" x="18" y="18" width="191" height="18"/>
+                        <rect key="frame" x="18" y="18" width="231" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="check" title="Show durations as decimal" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="2566">
+                        <buttonCell key="cell" type="check" title="Zobrazit dobu trvání desítkově" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="2566">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -1952,9 +1944,9 @@ Gw
             <connections>
                 <outlet property="delegate" destination="1564" id="1565"/>
             </connections>
-            <point key="canvasLocation" x="-50.5" y="845.5"/>
+            <point key="canvasLocation" x="768.5" y="632.5"/>
         </window>
-        <window title="Pick Date" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="703" userLabel="Pick Date Panel" customClass="NSPanel">
+        <window title="Vybrat datum" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="703" userLabel="Pick Date Panel" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="302" width="245" height="208"/>
@@ -1969,7 +1961,7 @@ Gw
                         <datePickerCell key="cell" borderStyle="bezel" alignment="left" datePickerStyle="clockAndCalendar" id="2141">
                             <font key="font" metaFont="system"/>
                             <calendarDate key="date" timeIntervalSinceReferenceDate="-595929600" calendarFormat="%Y-%m-%d %H:%M:%S %z">
-                                <!--1982-02-12 08:00:00 -0800-->
+                                <!--1982-02-12 16:00:00 +0000-->
                                 <timeZone key="timeZone" name="US/Pacific"/>
                             </calendarDate>
                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1982,7 +1974,7 @@ Gw
                     <button verticalHuggingPriority="750" id="748">
                         <rect key="frame" x="135" y="12" width="96" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="push" title="OK" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2142">
+                        <buttonCell key="cell" type="push" title="Budiž" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2142">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -1990,7 +1982,7 @@ Gw
                     <button verticalHuggingPriority="750" id="750">
                         <rect key="frame" x="14" y="12" width="96" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2143">
+                        <buttonCell key="cell" type="push" title="Zrušit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2143">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -2000,7 +1992,6 @@ Gw
             <connections>
                 <outlet property="delegate" destination="211" id="710"/>
             </connections>
-            <point key="canvasLocation" x="952.5" y="775"/>
         </window>
         <objectController id="1564" userLabel="Preferences Controller" customClass="PreferencesController">
             <connections>
@@ -2021,9 +2012,9 @@ Gw
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <textField verticalHuggingPriority="750" id="2200">
-                    <rect key="frame" x="17" y="12" width="47" height="17"/>
+                    <rect key="frame" x="17" y="12" width="53" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Range:" id="2201">
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Rozsah:" id="2201">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -2032,13 +2023,13 @@ Gw
                 <popUpButton verticalHuggingPriority="750" id="2202">
                     <rect key="frame" x="72" y="6" width="167" height="26"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <popUpButtonCell key="cell" type="push" title="All Data" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="2205" id="2203">
+                    <popUpButtonCell key="cell" type="push" title="Všechna data" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="2205" id="2203">
                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="menu"/>
+                        <font key="font" metaFont="system"/>
                         <menu key="menu" title="OtherViews" id="2204">
                             <items>
-                                <menuItem title="All Data" state="on" id="2205"/>
-                                <menuItem title="Selection" tag="1" id="2206"/>
+                                <menuItem title="Všechna data" state="on" id="2205"/>
+                                <menuItem title="Výběr" tag="1" id="2206"/>
                             </items>
                         </menu>
                     </popUpButtonCell>
@@ -2047,10 +2038,10 @@ Gw
         </customView>
         <menu id="2208" userLabel="ExportSaveMenu">
             <items>
-                <menuItem title="All Data" id="2209">
+                <menuItem title="Všechna data" id="2209">
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
-                <menuItem title="Selection" tag="1" id="2210">
+                <menuItem title="Výběr" tag="1" id="2210">
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
             </items>
@@ -2093,22 +2084,15 @@ Gw
                 <binding destination="211" name="contentArray" keyPath="selectedTask.workPeriods" id="2569"/>
             </connections>
         </arrayController>
-        <arrayController id="2570" userLabel="TaskArrayController" customClass="RSRTVArrayController">
+        <arrayController id="2570" userLabel="TaskArrayController">
             <declaredKeys>
                 <string>name</string>
                 <string>filteredDuration</string>
             </declaredKeys>
             <connections>
                 <binding destination="211" name="contentArray" keyPath="currentTasks" id="2573"/>
-                <outlet property="oMovingDelegate" destination="2587" id="2588"/>
-                <outlet property="oTableView" destination="228" id="2586"/>
             </connections>
         </arrayController>
-        <customObject id="2587" customClass="TTaskMover">
-            <connections>
-                <outlet property="mainController" destination="211" id="2589"/>
-            </connections>
-        </customObject>
     </objects>
     <resources>
         <image name="NSAddTemplate" width="11" height="11"/>
