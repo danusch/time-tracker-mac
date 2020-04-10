@@ -931,10 +931,16 @@
     // First write to temp file
     NSString *tempPath = [path stringByAppendingString:@".temp"];
     if ([NSKeyedArchiver archiveRootObject:rootObject toFile:tempPath]) {
-        // then delete the old copy
         NSFileManager *manager = [NSFileManager defaultManager];
-        if ([manager removeItemAtPath:path error:&error]) {
-            // Then copy file over to the right place
+        if ([self dataFileExists]) {
+            // then delete the old copy
+            if ([manager removeItemAtPath:path error:&error]) {
+                // Then copy file over to the right place
+                if ([manager moveItemAtPath:tempPath toPath:path error:&error]) {
+                    successfullySaved = TRUE;
+                }
+            }
+        } else {
             if ([manager moveItemAtPath:tempPath toPath:path error:&error]) {
                 successfullySaved = TRUE;
             }
