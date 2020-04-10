@@ -76,8 +76,7 @@
 	if (name == _taskName) {
 		return;
 	}
-	[_taskName release];
-	_taskName = [name retain];
+	_taskName = name;
 }
 
 @end

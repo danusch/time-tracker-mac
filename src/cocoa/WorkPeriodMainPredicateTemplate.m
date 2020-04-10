@@ -20,8 +20,4 @@
     return 0.0;
 }
 
--(void) dealloc {
-    self._templateViews = nil;
-    [super dealloc];
-}
 @end

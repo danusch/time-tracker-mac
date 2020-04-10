@@ -15,18 +15,11 @@
 @synthesize predicate = _predicate;
 
 -(id) initWithTitle:(NSString*)title predicate:(NSPredicate*)predicate {
-    [super init];
-    self.title = title;
-    self.predicate = predicate;
+    if (self = [super init]) {
+        self.title = title;
+        self.predicate = predicate;
+    }
     return self;
 }
-
-- (void)dealloc {
-    self.title = nil;
-    self.predicate = nil;
-    
-    [super dealloc];
-}
-
 
 @end

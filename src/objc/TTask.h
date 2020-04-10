@@ -40,9 +40,9 @@
 @property(readonly) NSInteger totalTime;
 @property(readonly) NSInteger filteredDuration;
 
-@property(retain, nonatomic) NSPredicate* filterPredicate;
-@property(retain, nonatomic) NSString* name;
-@property(retain, nonatomic) TProject* parentProject;
+@property(strong, nonatomic) NSPredicate* filterPredicate;
+@property(strong, nonatomic) NSString* name;
+@property(strong, nonatomic) TProject* parentProject;
 @property int taskId;
 
 

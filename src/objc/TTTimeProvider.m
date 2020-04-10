@@ -22,8 +22,7 @@ static id staticInstance;
 
 - (void)setNow:(NSDate *)aNow
 {
-  [masterNow release];
-  masterNow = [aNow retain];
+  masterNow = aNow;
 }
 
 - (NSDate *)now
@@ -36,12 +35,6 @@ static id staticInstance;
   {
     return [NSDate date];
   }
-}
-
-- (void)dealloc
-{
-  [masterNow release];
-  [super dealloc];
 }
 
 #pragma mark day functions
@@ -58,7 +51,6 @@ static id staticInstance;
     NSDateComponents *components = [[NSDateComponents alloc] init];
     [components setDay:-days];
     NSDate *startDate = [cal dateByAddingComponents:components toDate:now options:0];
-    [components release];
     return startDate;
 }
 

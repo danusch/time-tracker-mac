@@ -48,10 +48,10 @@
         id attribComment = [coder decodeObjectForKey:ENCODER_KEY_COMMENT];
 		
         if ([attribComment isKindOfClass:[NSString class]]) {
-			attribComment = [[[NSAttributedString alloc] initWithString:attribComment] autorelease];
+			attribComment = [[NSAttributedString alloc] initWithString:attribComment];
         }
         if (attribComment == nil) {
-			attribComment = [[[NSAttributedString alloc] initWithString:[coder decodeObjectForKey:@"Comment"]] autorelease];
+			attribComment = [[NSAttributedString alloc] initWithString:[coder decodeObjectForKey:@"Comment"]];
         }
         [self setComment:attribComment];
     } else {
@@ -68,9 +68,7 @@
 - (void) setStartTime: (NSDate *) startTime
 {
     if (startTime != _startTime) {
-        [_startTime release];
-        _startTime = nil;
-        _startTime = [startTime retain];
+        _startTime = startTime;
 		// reset the start date otherwise our filter is all wrong
 		self.date = nil;
         [self updateTotalTime];        
@@ -83,9 +81,7 @@
 		// determine difference
 		NSTimeInterval diffInSeconds = [endTime timeIntervalSinceDate:_startTime];
 		NSInteger totalDiff = diffInSeconds - _totalTime;
-        [_endTime release];
-        _endTime = nil;
-        _endTime = [endTime retain];
+        _endTime = endTime;
 		if (_totalTime > 0 && totalDiff < 5.0) {
 			self.totalTime = _totalTime + totalDiff;
 			[_parent updateTotalBySeconds:diffInSeconds sender:self];
@@ -142,8 +138,8 @@
     int hours = _totalTime / 3600;
     int minutes = _totalTime % 3600 / 60;
     int seconds = _totalTime - hours * 3600 - minutes * 60;// % 60;
-	NSDateFormatter *formatter = [[[NSDateFormatter alloc] initWithDateFormat:@"%Y-%m-%d %H:%M:%S" allowNaturalLanguage:NO]  autorelease];
-	NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] initWithDateFormat:@"%Y-%m-%d" allowNaturalLanguage:NO]  autorelease];
+	NSDateFormatter *formatter = [[NSDateFormatter alloc] initWithDateFormat:@"%Y-%m-%d %H:%M:%S" allowNaturalLanguage:NO];
+	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] initWithDateFormat:@"%Y-%m-%d" allowNaturalLanguage:NO] ;
 	NSString* result = [NSString stringWithFormat:@"%@%@\"%@\"%@\"%@\"%@\"%@\"%@\"%02d:%02d:%02d\"%@\"%@\"\n", prefix, sep, 
                         [dateFormatter stringFromDate:_startTime], sep,
                         [formatter stringFromDate:_startTime], sep, [formatter stringFromDate:_endTime], sep,

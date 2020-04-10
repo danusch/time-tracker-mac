@@ -219,14 +219,14 @@
 -(void) reloadTasks;
 
 @property(readonly) BOOL timerRunning;
-@property(retain, nonatomic) NSPredicate* extraFilterPredicate;
-@property(retain, nonatomic) NSString *updateURL;
+@property(strong, nonatomic) NSPredicate* extraFilterPredicate;
+@property(strong, nonatomic) NSString *updateURL;
 @property BOOL decimalHours;
-@property(retain, nonatomic) id<ITask> selectedTask;
-@property(retain, nonatomic) id<IProject> selectedProject;
-@property(retain, nonatomic) NSArray* currentTasks;
-@property(retain, nonatomic) TaskEditorController* taskEditorController;
-@property(retain, nonatomic) NSDate* currentFilterCreationDate;
+@property(strong, nonatomic) id<ITask> selectedTask;
+@property(strong, nonatomic) id<IProject> selectedProject;
+@property(strong, nonatomic) NSArray* currentTasks;
+@property(strong, nonatomic) TaskEditorController* taskEditorController;
+@property(strong, nonatomic) NSDate* currentFilterCreationDate;
 
 @end
 
